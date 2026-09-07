@@ -45,7 +45,17 @@ function Hero(){
       <motion.div className="pastry-pointer" style={{x:enabled?x:0,y:enabled?y:0,rotateX:enabled?tiltX:0,rotateY:enabled?tiltY:0}}><div className="pastry-float"><img className="hero-pastry" src="/images/croissant.webp" alt="Великий золотавий круасан з тонкими хрусткими шарами" width="1536" height="1024" fetchPriority="high"/></div></motion.div>
     </motion.div>
     <motion.div className="hero-intro" initial={enabled?{opacity:0,y:24}:false} animate={{opacity:1,y:0}} transition={{duration:1,delay:.6,ease}}><h2>Щастя.<br/>З хрусткою скоринкою.</h2><p>Випікаємо не поспішаючи.<br/>Щоб ви теж нікуди не поспішали.</p><MagneticLink href="#menu" className="button">Дивитися меню <ArrowUpRight size={20}/></MagneticLink></motion.div>
-    <motion.div className="hero-stamp" initial={enabled?{opacity:0,rotate:-25,scale:.8}:false} animate={{opacity:1,rotate:0,scale:1}} transition={{duration:1,delay:.9,ease}}><span className="stamp-top">ЗРОБЛЕНО РУКАМИ</span><Sun size={34} strokeWidth={1}/><span className="stamp-bottom">З’ЇДЕНО З ЛЮБОВ’Ю</span></motion.div>
+    <motion.div className="hero-stamp" initial={enabled?{opacity:0,rotate:-25,scale:.8}:false} animate={{opacity:1,rotate:0,scale:1}} transition={{duration:1,delay:.9,ease}}>
+      <svg viewBox="0 0 160 160" className="stamp-text-svg" aria-hidden="true">
+        <path id="hero-stamp-path" d="M 80, 80 m -55, 0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0" fill="none"/>
+        <text fontSize="10.8" fontWeight="600" letterSpacing="2.8" fill="currentColor">
+          <textPath href="#hero-stamp-path" startOffset="0%">
+            ЗРОБЛЕНО РУКАМИ • З’ЇДЕНО З ЛЮБОВ’Ю • 
+          </textPath>
+        </text>
+      </svg>
+      <Sun size={32} strokeWidth={1} className="stamp-sun-icon" />
+    </motion.div>
     <div className="hero-note">Вершкове масло.<br/>Багато шарів.<br/><i>І трохи магії.</i></div>
     <a className="scroll-hint" href="#menu"><span>ГОРТАЙТЕ, ТУТ ТЕПЛО</span><ArrowDown size={22}/></a>
   </section>;
