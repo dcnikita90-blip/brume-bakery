@@ -5,10 +5,10 @@ import '@fontsource-variable/cormorant-garamond/wght-italic.css';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'BRUME — Пекарня медленного утра',
-  description: 'Хрустящая корочка, мягкий свет и время для себя. Авторская выпечка и кофе в пекарне BRUME.',
+  title: 'BRUME — Пекарня повільного ранку',
+  description: 'Хрустка скоринка, м’яке світло та час для себе. Авторська випічка та кава в пекарні BRUME.',
   icons: { icon: '/favicon.svg' },
 };
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
-  return <html lang="ru"><body>{children}</body></html>;
+  return <html lang="uk"><body>{children}</body></html>;
 }
